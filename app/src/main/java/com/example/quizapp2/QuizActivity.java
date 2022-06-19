@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.quizapp2.Model.QuestionsList;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;

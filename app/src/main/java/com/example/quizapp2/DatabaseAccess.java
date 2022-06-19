@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.quizapp2.Model.QuestionsList;
+import com.example.quizapp2.Model.Quizes;
+
 import java.util.ArrayList;
 import java.util.List;
 

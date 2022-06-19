@@ -1,4 +1,4 @@
-package com.example.quizapp2;
+package com.example.quizapp2.Model;
 
 public class QuestionsList {
     private String question,option1,option2,option3,option4,answer;
