@@ -20,12 +20,6 @@ public class MainActivity extends AppCompatActivity {
         DatabaseAccess databaseAccess=DatabaseAccess.getInstance(getApplicationContext());
         databaseAccess.open();
 
-        String address=databaseAccess.getQuiz();
-
-        List<String>quiz=databaseAccess.getQuizes();
-
-        text.setText(address+quiz.get(0));
-
         databaseAccess.close();
     }
 }

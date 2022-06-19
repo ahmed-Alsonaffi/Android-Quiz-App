@@ -36,36 +36,19 @@ public class DatabaseAccess {
         }
     }
 
-    public String getQuiz(){
-        c=db.rawQuery("SELECT type from QuestionType",new String[]{});
-        StringBuffer buffer=new StringBuffer();
-        while (c.moveToNext()){
-            String address=c.getString(0);
-            buffer.append(""+address);
-        }
-        return buffer.toString();
-    }
 
-    public List<String> getQuizes(){
-        List<String> list=new ArrayList<>();
-        Cursor cursor=db.rawQuery("SELECT type from QuestionType",new String[]{});
+    public ArrayList<Quizes> getQuizes(){
+        final List<Quizes> quizes=new ArrayList<>();
+        String query="SELECT count(Questions.id),QuestionType.type,QuestionType.user_result,QuestionType.image FROM Questions,QuestionType where Questions.Type=QuestionType.id GROUP by QuestionType.id";
+        Cursor cursor=db.rawQuery(query,new String[]{});
         while (cursor.moveToNext()){
             String type=cursor.getString(0);
-            list.add(type);
-        }
-        return list;
-    }
-
-    public List<String> getQuizResult(){
-        List<String> list=new ArrayList<>();
-        Cursor cursor=db.rawQuery("SELECT count(Questions.id),QuestionType.user_result FROM Questions,QuestionType where Questions.Type=QuestionType.id GROUP by QuestionType.id",new String[]{});
-        while (cursor.moveToNext()){
-            String type=cursor.getString(0);
-            String user_result=cursor.getString(1);
+            String user_result=cursor.getString(2);
             String result=user_result+"/"+type;
-            list.add(result);
+            final Quizes quiz=new Quizes(cursor.getString(1),result,cursor.getString(3));
+            quizes.add(quiz);
         }
-        return list;
+        return (ArrayList)quizes;
     }
 
     public ArrayList<QuestionsList> getQuestions(String topic){
