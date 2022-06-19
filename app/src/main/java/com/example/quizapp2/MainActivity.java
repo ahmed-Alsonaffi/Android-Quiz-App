@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import java.util.List;
+import com.example.quizapp2.Database.DatabaseAccess;
 
 public class MainActivity extends AppCompatActivity {
     public TextView text;

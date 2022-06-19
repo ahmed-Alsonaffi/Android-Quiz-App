@@ -1,4 +1,4 @@
-package com.example.quizapp2;
+package com.example.quizapp2.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.quizapp2.Model.Quizes;
+import com.example.quizapp2.R;
 
 import java.util.ArrayList;
 

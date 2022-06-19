@@ -12,7 +12,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.quizapp2.Database.DatabaseAccess;
 import com.example.quizapp2.Model.Quizes;
+import com.example.quizapp2.adapter.CustomList;
 
 import java.util.ArrayList;
 

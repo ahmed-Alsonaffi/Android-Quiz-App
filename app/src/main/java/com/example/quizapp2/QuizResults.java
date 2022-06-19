@@ -8,8 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.quizapp2.Database.DatabaseAccess;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class QuizResults extends AppCompatActivity {
 

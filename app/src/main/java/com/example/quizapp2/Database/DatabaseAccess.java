@@ -1,4 +1,4 @@
-package com.example.quizapp2;
+package com.example.quizapp2.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
